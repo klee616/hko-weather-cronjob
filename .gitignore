@@ -1,0 +1,11 @@
+
+.env
+config.ini
+
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+*.log
+*.csv
