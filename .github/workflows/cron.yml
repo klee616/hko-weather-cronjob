@@ -13,8 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 修正：改用 main 分支或穩定 tag 版本 (v1.2)
       - name: Setup Cloudflare WARP
-        uses: fscarmen/warp-on-actions@v1
+        uses: fscarmen/warp-on-actions@main
         with:
           stack: dual
 
