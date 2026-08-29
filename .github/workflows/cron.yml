@@ -2,8 +2,8 @@ name: HKO Weather Data Pipeline Cron
 
 on:
   schedule:
-    - cron: '0/5 * * * *'
-  workflow_dispatch: 
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   run-pipeline:
@@ -13,11 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Cloudflare WARP
+        uses: fscarmen/warp-on-actions@v1
+        with:
+          stack: dual
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip' 
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
