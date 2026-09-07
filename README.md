@@ -59,3 +59,8 @@ The workflow executes automatically every 5 minutes and includes an automated ke
 Connect weather_snapshots and fact_temperature using Tableau Relationships (weather_snapshots.id = fact_temperature.snapshot_id).
 
 Build spatial heatmaps using station coordinates or time-series dashboards to analyze temperature fluctuations across districts in Hong Kong.
+
+```
+
+### Tableau Dashboard
+<img width="1761" height="983" alt="image" src="https://github.com/user-attachments/assets/2c322579-76d1-4aca-aabb-5a44414860ca" />
